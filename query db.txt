@@ -1,0 +1,12 @@
+create table client
+(
+cedula int primary key,
+name varchar(20), 
+lastname varchar(20),  
+age int, 
+phone int, 
+address varchar(60), 
+start_date date, 
+end_date date
+);
+

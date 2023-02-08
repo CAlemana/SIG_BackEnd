@@ -10,3 +10,12 @@ start_date date,
 end_date date
 );
 
+insert into client
+(cedula, name, lastname, age, phone, address, start_date, end_date)
+values (503810397, 'carlos', 'aleman', 30, 83896464, 'Sanjose', '02-01-2023', '02-28-2023'
+)
+
+insert into client
+(cedula, name, lastname, age, phone, address, start_date, end_date)
+values (112380579, 'carolina', 'mendez', 25, 88915243, 'Heredia', '01-15-2023', '02-15-2023'
+)

@@ -30,8 +30,8 @@ app.use((req, res, next) => {
 
 app.use('/api/clients', clientRoute);
 app.use('/api/imc', imcRoute);
-app.use('/api/expense', expenseRoute);
-app.use('/api/revenue', revenueRoute);
+app.use('/api/expenses', expenseRoute);
+app.use('/api/revenues', revenueRoute);
 
 app.listen(port, () => console.log(`listening on port ${port}`));
 

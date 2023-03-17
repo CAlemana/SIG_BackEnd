@@ -4,34 +4,28 @@ cedula int primary key,
 name varchar(20), 
 lastname varchar(20),  
 age int, 
-phone int, 
-address varchar(60), 
-start_date date, 
-end_date date
+gender varchar(60),
+height int,
+weight int,
+phone int,  
+start_date varchar(10), 
+end_date varchar(10),
+bmi numeric(4, 2)
 );
 
-
-create table IMC
-(
-cedula int primary key,
-name varchar(20), 
-height int,  
-weight int, 
-bmi decimal(4,2)
-);
 
 create table expense
 (
-id serial primary key,
+id int serial primary key,
 value int, 
 kind_value varchar(20),  
-date date
+date varchar(10)
 );
 
 create table revenue
 (
-id serial primary key,
+id int serial primary key,
 value int, 
 kind_value varchar(20),  
-date date
+date varchar(10)
 );

@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-
+//prueba
 
 app.use('/api/clients', clientRoute);
 app.use('/api/imc', imcRoute);

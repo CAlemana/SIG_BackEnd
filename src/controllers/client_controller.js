@@ -10,13 +10,13 @@ const get = (req, res) => {
 
 
 const add = (req, res) => {
-    const { cedula, name, lastname, age, gender, phone, start_date, end_date } = req.body;
+    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc} = req.body;
     pool.query(queries.checkIdExists, [cedula], (error, results) => {
         if (results.rows.length) {
             res.json("ya existe");
 	    return;
         }
-        pool.query(queries.add, [cedula, name, lastname, age, gender, phone, start_date, end_date], (error, results) => {
+        pool.query(queries.add, [cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc], (error, results) => {
             if (error) throw error;
             res.status(201).json('creado exitosamente');
         });
@@ -52,14 +52,14 @@ const remove = (req, res) => {
 
 const update = (req, res) => {
     const id = parseInt(req.params.id);
-    const { cedula, name, lastname, age, gender, phone, start_date, end_date } = req.body;
+    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc} = req.body;
     pool.query(queries.getById, [id], (error, results) => {
         const notFound = !results.rows.length;
         if (notFound) {
             res.status(404).send("No existe en la base de datos");
             return;
         }
-        pool.query(queries.update, [cedula, name, lastname, age, gender, phone, start_date, end_date, id], (error, results) => {
+        pool.query(queries.update, [cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc, id], (error, results) => {
             if (error) throw error;
             res.status(200).send("Actualizado exitosamente");
         });

@@ -48,7 +48,7 @@ const remove = (req, res) => {
         });
     });
 };
-
+//pruebacomentariogit
 const update = (req, res) => {
     const id = parseInt(req.params.id);
     const { cedula, name, height, weight, imc } = req.body;

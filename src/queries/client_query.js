@@ -5,6 +5,7 @@ const add = "INSERT INTO client (cedula, name, lastname, age, gender, height, we
 const remove = "DELETE FROM client WHERE cedula = $1";
 const update = "UPDATE client SET cedula=$1, name=$2, lastname=$3, age=$4, gender=$5, height=$6, weight=$7, phone=$8, start_date=$9, end_date=$10, bmi=$11 WHERE cedula = $12";
 
+
 module.exports = {
     get,
     getById,

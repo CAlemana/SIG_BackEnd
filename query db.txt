@@ -5,12 +5,12 @@ name varchar(20),
 lastname varchar(20),  
 age int, 
 gender varchar(60),
-height int,
-weight int,
+height numeric(4,2),
+weight numeric(6,3),
 phone int,  
 start_date varchar(10), 
 end_date varchar(10),
-bmi numeric(4, 2)
+bmi numeric(6, 4)
 );
 
 

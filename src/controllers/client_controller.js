@@ -10,7 +10,7 @@ const get = (req, res) => {
 
 
 const add = (req, res) => {
-    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc} = req.body;
+    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc } = req.body;
     pool.query(queries.checkIdExists, [cedula], (error, results) => {
         if (results.rows.length) {
             res.json("ya existe");
@@ -22,7 +22,6 @@ const add = (req, res) => {
         });
     });
 };
-
 
 
 
@@ -52,7 +51,7 @@ const remove = (req, res) => {
 
 const update = (req, res) => {
     const id = parseInt(req.params.id);
-    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc} = req.body;
+    const { cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc } = req.body;
     pool.query(queries.getById, [id], (error, results) => {
         const notFound = !results.rows.length;
         if (notFound) {

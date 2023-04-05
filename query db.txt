@@ -16,7 +16,7 @@ bmi numeric(6, 4)
 
 create table expense
 (
-id int serial primary key,
+id serial primary key,
 value int, 
 kind_value varchar(20),  
 date varchar(10)
@@ -24,7 +24,7 @@ date varchar(10)
 
 create table revenue
 (
-id int serial primary key,
+id serial primary key,
 value int, 
 kind_value varchar(20),  
 date varchar(10)

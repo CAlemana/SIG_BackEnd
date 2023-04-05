@@ -11,7 +11,8 @@ const get = (req, res) => {
 
 const add = (req, res) => {
     const { value, kind_value, date } = req.body;
-    pool.query(queries.checkIdExists, [cedula], (error, results) => {
+/*
+    pool.query(queries.checkIdExists, [id], (error, results) => {
         if (results.rows.length) {
             res.json("ya existe");
 	    return;
@@ -20,6 +21,11 @@ const add = (req, res) => {
             if (error) throw error;
             res.status(201).json('creado exitosamente');
         });
+    });
+*/
+    pool.query(queries.add, [value, kind_value, date], (error, results) => {
+        if (error) throw error;
+        res.status(201).json('creado exitosamente');
     });
 };
 

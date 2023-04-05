@@ -10,7 +10,7 @@ weight numeric(6,3),
 phone int,  
 start_date varchar(10), 
 end_date varchar(10),
-bmi numeric(6, 4)
+imc numeric(6, 4)
 );
 
 

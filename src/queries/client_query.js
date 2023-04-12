@@ -1,4 +1,4 @@
-x|const get = "SELECT cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc FROM client";
+const get = "SELECT cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc FROM client";
 const getById = "SELECT cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc FROM client WHERE cedula = $1";
 const checkIdExists = "SELECT cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc FROM client WHERE cedula = $1";
 const add = "INSERT INTO client (cedula, name, lastname, age, gender, height, weight, phone, start_date, end_date, imc) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)";

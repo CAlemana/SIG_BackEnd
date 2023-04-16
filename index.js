@@ -5,6 +5,7 @@ const clientRoute = require('./src/routes/client_route');
 const imcRoute = require('./src/routes/imc_route');
 const expenseRoute = require('./src/routes/expense_route');
 const revenueRoute = require('./src/routes/revenue_route');
+const userRoute = require('./src/routes/user_route');
 
 
 const app = express();
@@ -18,6 +19,7 @@ app.use('/api/clients', clientRoute);
 app.use('/api/imc', imcRoute);
 app.use('/api/expenses', expenseRoute);
 app.use('/api/revenues', revenueRoute);
+app.use('/api/users', userRoute);
 
 app.listen(port, () => console.log(`listening on port ${port}`));
 

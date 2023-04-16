@@ -29,3 +29,13 @@ value int,
 kind_value varchar(20),  
 date varchar(10)
 );
+
+
+
+create table usuario
+(
+username varchar(20), 
+pass varchar(20)
+);
+
+insert into usuario (username, pass) values ('Admin', 'Admin123')

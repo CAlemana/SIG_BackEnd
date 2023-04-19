@@ -59,7 +59,7 @@ const update = (req, res) => {
             return;
         }
         pool.query(queries.update, [ name, lastname, age, gender, height, weight, phone, start_date, end_date, imc, id], (error, results) => {
-            //if (error) throw error;
+            //if (error) throw error; 
             res.status(200).send("Actualizado exitosamente");
         });
     });

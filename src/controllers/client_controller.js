@@ -52,18 +52,25 @@ const remove = (req, res) => {
 const update = (req, res) => {
     const id = parseInt(req.params.id);
     const { name, lastname, age, gender, height, weight, phone, start_date, end_date, imc } = req.body;
+
     pool.query(queries.getById, [id], (error, results) => {
         const notFound = !results.rows.length;
         if (notFound) {
             res.status(404).send("No existe en la base de datos");
             return;
         }
-        pool.query(queries.update, [ name, lastname, age, gender, height, weight, phone, start_date, end_date, imc, id], (error, results) => {
-            //if (error) throw error; 
+
+        pool.query(queries.update, [name, lastname, age, gender, height, weight, phone, start_date, end_date, imc, id], (error, results) => {
+            if (error) {
+                console.error(error);
+                res.status(500).send("Error al actualizar");
+                return;
+            }
             res.status(200).send("Actualizado exitosamente");
         });
     });
 };
+
 
 module.exports = {
     get,

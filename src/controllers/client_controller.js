@@ -62,7 +62,7 @@ const update = (req, res) => {
 
         pool.query(queries.update, [name, lastname, age, gender, height, weight, phone, start_date, end_date, imc, id], (error, results) => {
             if (error) {
-                console.error(error);
+                //console.error(error);
                 res.status(500).send("Error al actualizar");
                 return;
             }

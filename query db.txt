@@ -39,3 +39,5 @@ pass varchar(20)
 );
 
 insert into usuario (username, pass) values ('Admin', 'Admin123')
+
+..
